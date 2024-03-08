@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(69, 177, 220);
+}
+
+/* title */
+.title {
+    font-family: 'Noto Sans Tangsa', sans-serif;
+    font-weight: 900;
+    max-height: 180px;
+    text-align: center;
+    /* border: 1px solid yellow; */
+}
+
+.title p {
+    text-shadow: 2px 2px 3px black;
+    color: white;
+    line-height: 180px;
+    font-size: 120px;
+}
+
+.title p::selection{
+    background-color: gold;
+    color: white;
+}
+
+/* container */
+.container {
+    width: 100vw;
+    height: calc(100vh - (180px + 45px));
+    display: grid;
+    place-items: center;
+
+}
+
+/* white */
+.white {
+    height: 200px;
+    width: 150px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* yellow */
+.yellow {
+    margin-top: 30px;
+    height: 90px;
+    width: 90px;
+    background-color: gold;
+    border-radius: 100%;
+}
+
+/* eyes */
+.eyes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 33px;
+}
+
+.r-eye, .l-eye {
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.white-eye {
+    transition: 0.3s;
+    background-color: white;
+    border-radius: 100%;
+    width: 0px;
+    height: 0px;
+
+}
+
+/* mouth */
+.mouth-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mouth {
+    height: 10px;
+    width: 20px;
+    background-color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+/* tongue */
+.toungue {
+    margin-bottom: 1px;
+    height: 5px;
+    width: 10px;
+    background-color: red;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/* tongue moves */
+.white:hover .toungue {
+    transition: 0.1s;
+    visibility: hidden;
+}
+
+.white:hover .mouth {
+    transition: 0.3s ease-in;
+    height: 5px;
+}
+
+/* eyes moves */
+.white:hover .white-eye {
+    height: 5px;
+    width: 5px;
+}
+
+/* angry egg */
+.white:hover .yellow {
+    transition: 10s;
+    background-color: rgb(169, 0, 0);
+}
+
+.white:hover {
+    transition: 10s;
+    background-color: rgb(230, 221, 221);
+}
+/* footer */
+footer{
+    background-color: gold;
+    font-size: 22px;
+    font-family: 'Noto Sans Tangsa', sans-serif;
+    font-weight: 900;
+    max-height: 45px;
+    min-height: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;    
+}
+
+
+
+/* VERSION TABLETE */
+
+@media screen and (max-width:768px) and (min-width:425px) {
+    /* titre */
+    .title{
+        max-height: 140px;
+        height: 140px;
+    }
+    .title p{
+        font-size: 80px;
+    }
+    .container{
+    height: calc(100vh - (60px + 140px));
+
+    }
+    /* footer */
+    footer{
+        max-height: 60px;
+        min-height: 60px ;
+        height: 60px;
+    }
+    footer p {
+        font-size: 18px;
+    }
+}
+
+/* VERSION TELEPHONE */
+@media screen and (max-width:425px) and (min-width:0) {
+    /* titre */
+    .title{
+        max-height: 110px;
+        height: 110px;
+    }
+    .title p{
+        font-size: 50px;
+    }
+    .container{
+    height: calc(100vh - (110px + 80px));
+
+    }
+    /* footer */
+    footer{
+        max-height: 80px;
+        min-height: 80px ;
+        height: 80px;
+    }
+    footer p {
+        font-size: 16px;
+    }
+
+}
+
+/* VERSION 4k */
+@media screen and (max-width:3000px) and (min-width:2400px) {
+
+    /* title */
+.title {
+    max-height: 310px;
+    min-height: 310px;
+    height: 310px;
+}
+
+.title p {
+    text-shadow: 5px 5px 6px black;
+    line-height: 310px;
+    font-size: 130px;
+}
+/* container */
+.container {
+    height: calc(100vh - (70px + 310px))
+}
+
+/* white */
+.white {
+    height: 300px;
+    width: 250px;
+}
+
+
+/* yellow */
+.yellow {
+    margin-top: 50px;
+    height: 140px;
+    width: 140px;
+}
+
+/* eyes */
+.eyes {
+    margin-top: 50px;
+}
+
+.r-eye, .l-eye {
+    height: 15px;
+    width: 15px;
+}
+
+/* mouth */
+.mouth-container {
+    margin-top: 15px;
+}
+
+.mouth {
+    height: 13px;
+    width: 28px;    
+}
+
+/* tongue */
+.toungue {
+    margin-bottom: 2px;
+    height: 6px;
+    width: 14px;
+}
+footer{
+    max-height: 70px;
+    height: 70px;
+    min-height:70px
+}
+footer p{
+    font-size: 33px;
+}
+.white:hover .white-eye{
+    height: 10px;
+    width: 10px;
+}
+}
+
+/* scroll bar */
+body::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+    background-color: rgb(162, 162, 162);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(227, 227, 227);
+    border-radius: 20px;
+}
+
+html{
+    scrollbar-color: rgb(162, 162, 162) rgb(227, 227, 227);
+    scrollbar-width: thin;
+}
